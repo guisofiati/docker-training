@@ -4,5 +4,28 @@
 
 ## Docker 
 
-- `docker ps` ou `docker container -ls` -> Lista de containers;
-- `docker ps -a` ou `docker container -a` -> Lista de containers que ja foram rodados na máquina; 
+---
+
+### Principais comandos
+
+- `docker ps` ou `docker container -ls` -> Lista de containers
+- `docker ps -a` ou `docker container -a` -> Lista de containers que ja foram rodados na máquina
+
+<br>
+
+- `docker run` -> Rodar o container (cria um novo)
+
+### Flags:
+1. `-it` -> Modo iterativo (terminal)
+2. `-d` -> Rodar em background (detached)
+3. `-p` -> Definir porta de exibição
+4. `--name` -> Definir o nome do container
+
+<br>
+
+- `docker start <id>` -> Startar um container já criado
+- `docker stop <id>` -> Stopar um container
+- `docker rm <id>` -> Excluir um container
+- `docker rm -f <id>` -> Excluir um container que esta rodando
+- `docker logs <id>` -> Logs do container
+- `docker logs -f <id>` -> Logs do container em tempo real
