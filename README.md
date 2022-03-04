@@ -33,7 +33,9 @@
 - `docker images` -> Exibir imagens instaladas
 - `docker pull <imagem>` -> Download de uma imagem
 - `docker tag <nome>` -> Nomear uma imagem
-- `docker tag <nome>:<tag>` -> Nomear uma imagem e 'versão'
+- `docker tag <imagem> <nome>:<tag>` -> Nomear uma imagem e 'versão'
+- `docker rmi <imagem>` -> Remover uma imagem
+- `docker rmi -f <imagem>` -> Remover uma imagem que esta sendo utilizada em um container
 
 <br>
 
