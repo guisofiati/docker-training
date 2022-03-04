@@ -29,3 +29,8 @@
 - `docker rm -f <id>` -> Excluir um container que esta rodando
 - `docker logs <id>` -> Logs do container
 - `docker logs -f <id>` -> Logs do container em tempo real
+- `docker build <diretorio>` -> Fazer o build da imagem
+- `docker images` -> Exibir imagens instaladas
+- `docker pull <imagem>` -> Download de uma imagem
+- `docker tag <nome>` -> Nomear uma imagem
+- `docker tag <nome>:<tag>` -> Nomear uma imagem e 'versão'
