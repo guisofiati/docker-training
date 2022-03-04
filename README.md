@@ -34,3 +34,12 @@
 - `docker pull <imagem>` -> Download de uma imagem
 - `docker tag <nome>` -> Nomear uma imagem
 - `docker tag <nome>:<tag>` -> Nomear uma imagem e 'versão'
+
+<br>
+
+## Dockerfile 
+
+`FROM` define a imagem base <br>
+`WORKDIR` define o diretório da aplicação <br>
+`EXPOSE` define a porta da aplicação <br>
+`COPY` define quais arquivos precisam ser copiados <br>
