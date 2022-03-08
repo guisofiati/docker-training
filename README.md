@@ -37,6 +37,10 @@
 - `docker tag <imagem> <nome>:<tag>` -> Nomear uma imagem e 'versão'
 - `docker rmi <imagem>` -> Remover uma imagem
 - `docker rmi -f <imagem>` -> Remover uma imagem que esta sendo utilizada em um container
+- `docker system prune` -> Remove imagens/container/networks não utilizados
+- `docker top <container>` -> Dados de execução do container (pid, cmd...)
+- `docker inspect <container>` -> Dados do container (id, imagem, data criação...)
+- `docker stats <container>` -> Processos sendo executados em um container (processamento e memória) 
 
 <br>
 
