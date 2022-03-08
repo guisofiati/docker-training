@@ -13,13 +13,14 @@
 
 <br>
 
-- `docker run` -> Rodar o container (cria um novo)
+- `docker run {flag} <container>` -> Rodar o container (cria um novo)
 
 ### Flags:
 1. `-it` -> Modo iterativo (terminal)
 2. `-d` -> Rodar em background (detached)
 3. `-p` -> Definir porta de exibição
 4. `--name` -> Definir o nome do container
+5. `--rm` -> Remove container quando stopado
 
 <br>
 
