@@ -41,6 +41,7 @@
 - `docker top <container>` -> Dados de execução do container (pid, cmd...)
 - `docker inspect <container>` -> Dados do container (id, imagem, data criação...)
 - `docker stats <container>` -> Processos sendo executados em um container (processamento e memória) 
+- `docker cp <container>:<caminho> <folder>` -> Copiar arquivos para uma folder
 - `docker push <user>:<repo>` -> Enviar para o docker hub
 
 <br>
