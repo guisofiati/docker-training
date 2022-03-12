@@ -1,10 +1,4 @@
-# DevOps
-
----
-
-## Docker 
-
----
+# Docker 
 
 ### Principais comandos
 
@@ -21,11 +15,13 @@
 3. `-p` -> Definir porta de exibição
 4. `--name` -> Definir o nome do container
 5. `--rm` -> Remove container quando stopado
+6. `-v <diretorio>` -> Criar volume
 
 <br>
 
 - `docker start <id>` -> Startar um container já criado
 - `docker stop <id>` -> Stopar um container
+- `docker stop <id> <id>` -> Stopar varios containers de uma vez
 - `docker rm <id>` -> Excluir um container
 - `docker rm -f <id>` -> Excluir um container que esta rodando
 - `docker logs <id>` -> Logs do container
@@ -43,6 +39,7 @@
 - `docker stats <container>` -> Processos sendo executados em um container (processamento e memória) 
 - `docker cp <container>:<caminho> <folder>` -> Copiar arquivos para uma folder
 - `docker push <user>:<repo>` -> Enviar para o docker hub
+- `docker volume ls` -> Ver todos os volumes do ambiente
 
 <br>
 
