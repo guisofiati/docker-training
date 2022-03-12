@@ -1,10 +1,4 @@
-# DevOps
-
----
-
-## Docker 
-
----
+# Docker 
 
 ### Principais comandos
 
