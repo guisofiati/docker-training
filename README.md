@@ -16,6 +16,7 @@
 4. `--name` -> Definir o nome do container
 5. `--rm` -> Remove container quando stopado
 6. `-v <diretorio>` -> Criar volume
+7. `-v <diretorio>:<path>:ro` -> Volume so de leitura
 
 <br>
 
@@ -40,6 +41,14 @@
 - `docker cp <container>:<caminho> <folder>` -> Copiar arquivos para uma folder
 - `docker push <user>:<repo>` -> Enviar para o docker hub
 - `docker volume ls` -> Ver todos os volumes do ambiente
+- `docker volume create <nome>` -> Criar volume
+- `docker volume rm <nome>` -> Apagar volume
+- `docker volume prune` -> Apagar todos os volumes
+- `docker volume inspect <nome>` -> Dados de um volume
+- `docker network ls` -> Listar networks
+- `docker network create <nome>` -> Criar network
+- `docker network rm <nome>` -> Excluir network
+- `docker network prune` -> Excluir todas as networks
 
 <br>
 
@@ -49,3 +58,4 @@
 `WORKDIR` define o diretório da aplicação <br>
 `EXPOSE` define a porta da aplicação <br>
 `COPY` define quais arquivos precisam ser copiados <br>
+`CMD` executa algo apos ser criado container. ex: CMD["python", "hello"]
