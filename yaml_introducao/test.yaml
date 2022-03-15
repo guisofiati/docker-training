@@ -1,5 +1,4 @@
 # Descrição do projeto
-
 nome: Guilherme
 idade: 21
 
@@ -16,3 +15,33 @@ string_com_aspas: "Texto numero 2"
 
 nulo_1: ~
 nulo_2: null 
+
+booleanos:
+  verdadeiro_com_true: True
+  verdadeiro_com_on: On
+
+  falso_com_false: False
+  falso_com_off: Off
+
+# Listas
+array_1: [1, 2, 3, 4, 5]
+
+array_2: 
+  - 1
+  - "teste"
+  - On
+  - outro teste 
+  - False
+  - 3.56
+
+obj: {a: 1, b: 'python', c: Off}
+
+obj_2: 
+  a: 1
+  b: 2
+
+  obj_interno:
+    c: 3
+    d: 4
+
+obj_3: {linguagem: 'java', infos: {versao: 8.1, lts: 11}}
