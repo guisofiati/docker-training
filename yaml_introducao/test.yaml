@@ -1,6 +1,12 @@
+# Descrição do projeto
+
 nome: Guilherme
 idade: 21
 
 objeto:
   versao: 2
   arquivo: "teste.txt"
+
+# inteiros, flutuantes
+versao: 2
+versao_completa: 3.14
