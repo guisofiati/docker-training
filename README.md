@@ -49,6 +49,9 @@
 - `docker network create <nome>` -> Criar network
 - `docker network rm <nome>` -> Excluir network
 - `docker network prune` -> Excluir todas as networks
+- `docker network connect <rede> <container>` -> Conectar em um network (não sendo necessário dar no run)
+- `docker network disconnect <rede> <container>` -> Disconectar container de uma network
+- `docker network inspect <nome>` -> Dados de uma rede (nome, data criação, containers conectados, drivers, etc...)
 
 <br>
 
