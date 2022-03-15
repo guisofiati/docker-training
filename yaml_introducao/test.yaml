@@ -10,3 +10,9 @@ objeto:
 # inteiros, flutuantes
 versao: 2
 versao_completa: 3.14
+
+string_sem_aspas: Texto numero 1
+string_com_aspas: "Texto numero 2"
+
+nulo_1: ~
+nulo_2: null 
