@@ -1,2 +1,6 @@
 nome: Guilherme
 idade: 21
+
+objeto:
+  versao: 2
+  arquivo: "teste.txt"
