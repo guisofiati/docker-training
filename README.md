@@ -52,6 +52,9 @@
 - `docker network connect <rede> <container>` -> Conectar em um network (não sendo necessário dar no run)
 - `docker network disconnect <rede> <container>` -> Disconectar container de uma network
 - `docker network inspect <nome>` -> Dados de uma rede (nome, data criação, containers conectados, drivers, etc...)
+- `docker-compose up` -> Startar compose
+- `docker-compose down` -> Stopar compose
+- `docker-compose ps` -> Dados do compose inicializado
 
 <br>
 
@@ -60,5 +63,10 @@
 `FROM` define a imagem base <br>
 `WORKDIR` define o diretório da aplicação <br>
 `EXPOSE` define a porta da aplicação <br>
-`COPY` define quais arquivos precisam ser copiados <br>
-`CMD` executa algo apos ser criado container. ex: CMD["python", "hello"]
+`COPY` define quais arquivos locais precisam ser copiados para o container <br>
+`ADD` mesma coisa que o copy mas tem algumas features como suporta a URL externa e extração de arquivos locais *tar* <br>
+`CMD` executa algo apos ser criado container. ex: CMD["python", "hello"] <br>
+`RUN` executa qualquer comanda em uma nova camada da imagem <br>
+`ENV` variaveis de ambiente, declarar um path por exemplo e usar nos demais comandos <br>
+`ENTRYPOINT` comando principal da imagem, primeira coisa a ser executada. ex: `ENTRYPOINT["echo"] CMD["--help"] ` <br>
+
