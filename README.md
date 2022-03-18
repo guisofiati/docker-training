@@ -1,5 +1,10 @@
 # Docker 
 
+## _STACKS DO TREINAMENTO:_
+- Docker Swarm 
+- AWS EC2 - AMI (Amazon Machine Image)
+- Kubernetes
+
 ### Principais comandos
 
 - `docker ps` ou `docker container -ls` -> Lista de containers
@@ -69,4 +74,3 @@
 `RUN` executa qualquer comanda em uma nova camada da imagem <br>
 `ENV` variaveis de ambiente, declarar um path por exemplo e usar nos demais comandos <br>
 `ENTRYPOINT` comando principal da imagem, primeira coisa a ser executada. ex: `ENTRYPOINT["echo"] CMD["--help"] ` <br>
-
