@@ -2,19 +2,13 @@
 
 ## _STACKS DO TREINAMENTO:_
 - Docker Swarm 
-- AWS EC2 - AMI (Amazon Machine Image)
 - Kubernetes
+- AWS EC2 - AMI (Amazon Machine Image)
+- Docker Labs - PWD (Play With Docker)
 
-### Principais comandos
+### Principais comandos:
 
-- `docker ps` ou `docker container -ls` -> Lista de containers
-- `docker ps -a` ou `docker container -a` -> Lista de containers que ja foram rodados na máquina
-
-<br>
-
-- `docker run {flag} <container>` -> Rodar o container (cria um novo)
-
-### Flags:
+#### Flags:
 1. `-it` -> Modo iterativo (terminal)
 2. `-d` -> Rodar em background (detached)
 3. `-p` -> Definir porta de exibição
@@ -25,6 +19,9 @@
 
 <br>
 
+- `docker run {flag} <container>` -> Rodar o container (cria um novo)
+- `docker ps` ou `docker container -ls` -> Lista de containers
+- `docker ps -a` ou `docker container -a` -> Lista de containers que ja foram rodados na máquina
 - `docker start <id>` -> Startar um container já criado
 - `docker stop <id>` -> Stopar um container
 - `docker stop <id> <id>` -> Stopar varios containers de uma vez
@@ -74,3 +71,14 @@
 `RUN` executa qualquer comanda em uma nova camada da imagem <br>
 `ENV` variaveis de ambiente, declarar um path por exemplo e usar nos demais comandos <br>
 `ENTRYPOINT` comando principal da imagem, primeira coisa a ser executada. ex: `ENTRYPOINT["echo"] CMD["--help"] ` <br>
+
+<br>
+
+## Docker Swarm
+
+- `docker swarm init --advertise-addr <ip node>` -> Cria um node manager
+- `docker swarm join --token <token> <ip>:<porta>` -> Adicionar nodes (máquinas) ao manager. As adicionadas serão _Workers_. Todas as ações (tasks) utilizadas no manager serão replicadas nos nodes workers
+- `docker swarm leave -f` -> Excluir node do swarm 
+- `docker node ls` -> Lista as máquinas conectadas/nodes ativos. Monitora o que esta sendo orquestrado
+- `docker service create --name <nome> { *alguns serviços -p <ip>:<porta> <imagem>` -> Subir um serviço (criará um container que vai rodar na máquina)
+- `docker service ls` -> Listar serviços rodando no swarm
