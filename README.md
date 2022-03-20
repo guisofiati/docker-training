@@ -67,7 +67,7 @@
 `EXPOSE` define a porta da aplicação <br>
 `COPY` define quais arquivos locais precisam ser copiados para o container <br>
 `ADD` mesma coisa que o copy mas tem algumas features como suporta a URL externa e extração de arquivos locais *tar* <br>
-`CMD` executa algo apos ser criado container. ex: CMD["python", "hello"] <br>
+`CMD` executa algo apos ser criado container. ex: **CMD["python", "hello"]** <br>
 `RUN` executa qualquer comanda em uma nova camada da imagem <br>
 `ENV` variaveis de ambiente, declarar um path por exemplo e usar nos demais comandos <br>
 `ENTRYPOINT` comando principal da imagem, primeira coisa a ser executada. ex: `ENTRYPOINT["echo"] CMD["--help"] ` <br>
@@ -78,7 +78,15 @@
 
 - `docker swarm init --advertise-addr <ip node>` -> Cria um node manager
 - `docker swarm join --token <token> <ip>:<porta>` -> Adicionar nodes (máquinas) ao manager. As adicionadas serão _Workers_. Todas as ações (tasks) utilizadas no manager serão replicadas nos nodes workers
-- `docker swarm leave -f` -> Excluir node do swarm 
+- `docker swarm leave` -> Exclui/Derruba node do swarm, ficando em **STATUS: _Down_**, ainda permanece no cmd `docker node ls` 
 - `docker node ls` -> Lista as máquinas conectadas/nodes ativos. Monitora o que esta sendo orquestrado
 - `docker service create --name <nome> { *alguns serviços -p <ip>:<porta> <imagem>` -> Subir um serviço (criará um container que vai rodar na máquina)
 - `docker service ls` -> Listar serviços rodando no swarm
+- `docker service rm <id>` -> Remove um serviço criado
+- `docker service create --name <nome> -p <ip>:<porta> --replicas <num. replicas) <imagem>` -> Criar serviço com réplicas, ou seja, se um node cair, ainda terá outros nodes que replica tudo o que o node manager faz
+- `docker node rm <id>` -> Remover um node
+- `docker swarm join-token manager` -> Gera o token para poder dar join como manager em outros nodes
+- `docker swarm join-token worker` -> Gera o token para poder dar join como worker em outros nodes
+- `docker info` -> Mostra o id do node, numero de nodes, numero de managers, etc...
+- `docker service inspect <id>` -> Mostra dados como porta, nome do serviço, data que foi criado/atualizado...
+- `docker service ps <id>` -> Verificar containers rodando  
