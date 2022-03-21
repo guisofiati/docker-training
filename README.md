@@ -89,4 +89,10 @@
 - `docker swarm join-token worker` -> Gera o token para poder dar join como worker em outros nodes
 - `docker info` -> Mostra o id do node, numero de nodes, numero de managers, etc...
 - `docker service inspect <id>` -> Mostra dados como porta, nome do serviço, data que foi criado/atualizado...
-- `docker service ps <id>` -> Verificar containers rodando  
+- `docker service ps <id>` -> Verificar containers rodando
+- `docker stack deploy -c <arquivo.yml> <nome>` -> Rodar compose no swarm
+- `docker service scale <nome>=<num. replicas>` -> Escalar mais nodes para o serviço
+- `docker node update --availability drain <id>` -> Faz com que o node não receba mais ordens do manager, ficando com **STATUS: _Drain_**
+- `docker node update --availability active <id>` -> Faz com que o node mude para **STATUS: _Active_** e passe a receber ordens do manager
+- `docker service update --image <imagem> <servico>` -> Atualiza parâmetro da imagem no serviço. *Obs: Apenas quem tem status active poderá receber as atualizações
+- `docker service update --network-add <rede> <nome>` -> Atualiza parâmetro da network do serviço, ou podemos passar também na criação do serviço utilizando a flag `--network <nome>`
