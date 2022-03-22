@@ -96,3 +96,15 @@
 - `docker node update --availability active <id>` -> Faz com que o node mude para **STATUS: _Active_** e passe a receber ordens do manager
 - `docker service update --image <imagem> <servico>` -> Atualiza parâmetro da imagem no serviço. *Obs: Apenas quem tem status active poderá receber as atualizações
 - `docker service update --network-add <rede> <nome>` -> Atualiza parâmetro da network do serviço, ou podemos passar também na criação do serviço utilizando a flag `--network <nome>`
+
+<br>
+
+## Kubernetes
+
+**Control plane:** Onde é gerenciado o controle dos processos dos nodes (manager) <br>
+**Nodes:** Máquinas gerenciadas pelo _control plane_ <br>
+**Pod:** Um ou mais containers que estão em um _node_ <br>
+**Deployment:** Execução de uma imagem/projeto em um _pod_ <br>
+**Services:** Serviços que expoe os _pods_ ao mundo externo <br>
+**kuberctl:** Cliente de linha de comando do k8s (terminal) <br>
+**minikube:** Simulador de k8s, para não precisarmos de vários computadores/servidores
