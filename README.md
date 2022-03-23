@@ -84,9 +84,16 @@
 
 ## Docker Swarm
 
+**Manager node:** O node que gerencia todos os outros nodes <br>
+**Worker node:** recebe funções do manager, pegam o que foi encaminhado dele e replicam nas suas máquinas <br>
+**Tasks:** Comandos que são executados nos nodes <br>
+**Service:** Conjunto de tasks que o manager manda o para o worker executar <br>
+
+<br>
+
 - `docker swarm init --advertise-addr <ip node>` -> Cria um node manager
 - `docker swarm join --token <token> <ip>:<porta>` -> Adicionar nodes (máquinas) ao manager. As adicionadas serão _Workers_. Todas as ações (tasks) utilizadas no manager serão replicadas nos nodes workers
-- `docker swarm leave` -> Exclui/Derruba node do swarm, ficando em **STATUS: _Down_**, ainda permanece no cmd `docker node ls` 
+- `docker swarm leave` -> Exclui/Derruba node do swarm, ficando em **STATUS: _Down_**, ainda permanece no cmd **docker node ls** 
 - `docker node ls` -> Lista as máquinas conectadas/nodes ativos. Monitora o que esta sendo orquestrado
 - `docker service create --name <nome> { *alguns serviços -p <ip>:<porta> <imagem>` -> Subir um serviço (criará um container que vai rodar na máquina)
 - `docker service ls` -> Listar serviços rodando no swarm
