@@ -6,6 +6,14 @@
 - AWS EC2 - AMI (Amazon Machine Image)
 - Docker Labs - PWD (Play With Docker)
 
+<br>
+
+## Mini aurélio:
+**Cluster:** dois ou mais computadores/servidores, cada um deles recebe o nome de _node_ ou _nó_ <br>
+**Node:** uma máquina do cluster
+
+<br>
+
 ### Principais comandos:
 
 #### Flags:
@@ -107,4 +115,11 @@
 **Deployment:** Execução de uma imagem/projeto em um _pod_ <br>
 **Services:** Serviços que expoe os _pods_ ao mundo externo <br>
 **kuberctl:** Cliente de linha de comando do k8s (terminal) <br>
-**minikube:** Simulador de k8s, para não precisarmos de vários computadores/servidores
+
+<br>
+
+**minikube:** Simulador de k8s, para não precisarmos de vários computadores/servidores, implanta um custer de apenas um nó (node) na máquina local <br>
+- `minikube start --driver=<driver> (docker, virtualbox, hyperv)` -> Startar/Restart o minikube (se tornará o control plane)
+- `minikube status` -> Ver status atual do serviço
+- `minikube stop` -> Stopar serviço
+- `minikube dashboard / (--url)` -> Disponibilizar um dashboard para monitorar/consultar serviços, pods...  
