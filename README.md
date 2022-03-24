@@ -49,6 +49,7 @@
 - `docker inspect <container>` -> Dados do container (id, imagem, data criação...)
 - `docker stats <container>` -> Processos sendo executados em um container (processamento e memória) 
 - `docker cp <container>:<caminho> <folder>` -> Copiar arquivos para uma folder
+- `docker login` -> Logar no DockerHub
 - `docker push <user>:<repo>` -> Enviar para o docker hub
 - `docker volume ls` -> Ver todos os volumes do ambiente
 - `docker volume create <nome>` -> Criar volume
@@ -118,7 +119,7 @@
 
 **Control plane:** Onde é gerenciado o controle dos processos dos nodes (manager) <br>
 **Nodes:** Máquinas gerenciadas pelo _control plane_ <br>
-**Pod:** Um ou mais containers que estão em um _node_ <br>
+**Pod:** Um ou mais containers que estão em um _node_. Pods é onde os containers são executados <br>
 **Deployment:** Execução de uma imagem/projeto em um _pod_ <br>
 **Services:** Serviços que expoe os _pods_ ao mundo externo <br>
 **kuberctl:** Cliente de linha de comando do k8s (terminal) <br>
@@ -130,3 +131,12 @@
 - `minikube status` -> Ver status atual do serviço
 - `minikube stop` -> Stopar serviço
 - `minikube dashboard / (--url)` -> Disponibilizar um dashboard para monitorar/consultar serviços, pods...  
+
+<br>
+
+- `kubectl create deployment <nome> --image=<imagem>` -> Fazer o deploy em cima de uma imagem criada.
+- `kubectl get deployments` -> Checar os deployments, ver status...
+- `kubectl describe deployments` -> Mais infos/detalhes dos deployments 
+- `kubectl get pods` -> Checas os pods
+- `kubectl describe pods` -> Mais infos/detalhes dos pods
+- `kubectl config view` -> Configurações do k8s, infos do minikube
