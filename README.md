@@ -135,8 +135,12 @@
 <br>
 
 - `kubectl create deployment <nome> --image=<imagem>` -> Fazer o deploy em cima de uma imagem criada.
-- `kubectl get deployments` -> Checar os deployments, ver status...
+- `kubectl get deployments` -> Verificar todos os deployments
 - `kubectl describe deployments` -> Mais infos/detalhes dos deployments 
-- `kubectl get pods` -> Checas os pods
+- `kubectl get pods` -> Verificar todos os pods
 - `kubectl describe pods` -> Mais infos/detalhes dos pods
 - `kubectl config view` -> Configurações do k8s, infos do minikube
+- `kubuctl expose deployment <nome_do_deployment> --type<tipo> (LoadBalancer) --port<porta>` -> Cria um serviço
+- `minikube service <nome_do_servico>` -> Cria um ip para poder acessar o serviço
+- `kubectl get services` -> Verificar todos os serviços
+- `kubectl describe services/<nome_do_servico>` -> Detalhes/infos do serviço
