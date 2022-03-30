@@ -146,3 +146,6 @@
 - `kubectl describe services/<nome_do_servico>` -> Detalhes/infos do serviço
 - `kubectl scale deployment/<nome_do_deployment> --replicas=<numero>` -> Criar réplicas, escalar aplicação. Mesmo cmd para diminuir as réplicas, só diminuir o número de réplicas depois de ter as criado.
 - `kubectl get rs` -> Checar as réplicas, ver status...
+- `kubectl set imagem deployment/<nome_do_deployment> <nome_do_container>=<nova_imagem>:<tag>` -> Atualizar imagem
+- `kubectl rollout status deployment/<nome_do_deployment>` -> Verificar uma alteração
+- `kubectl rollout undo deployment/<nome_do_deployment>` -> Desfazer uma alteração
