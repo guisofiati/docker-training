@@ -144,3 +144,5 @@
 - `minikube service <nome_do_servico>` -> Cria um ip para poder acessar o serviço
 - `kubectl get services` -> Verificar todos os serviços
 - `kubectl describe services/<nome_do_servico>` -> Detalhes/infos do serviço
+- `kubectl scale deployment/<nome_do_deployment> --replicas=<numero>` -> Criar réplicas, escalar aplicação. Mesmo cmd para diminuir as réplicas, só diminuir o número de réplicas depois de ter as criado.
+- `kubectl get rs` -> Checar as réplicas, ver status...
