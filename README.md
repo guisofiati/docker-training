@@ -134,6 +134,8 @@
 
 <br>
 
+### Modo imperativo (executando a aplicação na mão com comandos)
+
 - `kubectl create deployment <nome> --image=<imagem>` -> Fazer o deploy em cima de uma imagem criada.
 - `kubectl get deployments` -> Verificar todos os deployments
 - `kubectl describe deployments` -> Mais infos/detalhes dos deployments 
@@ -149,3 +151,19 @@
 - `kubectl set imagem deployment/<nome_do_deployment> <nome_do_container>=<nova_imagem>:<tag>` -> Atualizar imagem
 - `kubectl rollout status deployment/<nome_do_deployment>` -> Verificar uma alteração
 - `kubectl rollout undo deployment/<nome_do_deployment>` -> Desfazer uma alteração
+- `kubectl delete service <nome_do_servico>` -> Deletar um serviço
+- `kubectl delete deployment <nom_do_deployment>` -> Deletar um deployment
+
+### Modo declarativo (executando aplicaçao com arquivo, semelhante ao compose)
+
+Chaves mais utilizadas: <br>
+`apiVersion`: versão da ferramenta <br>
+`kind`: tipo de arquivo (deployment, service) <br>
+`metadata`: descrever algum objeto (nome), ex serviço <br>
+`replicas`: número de réplicas de nodes/pods <br>
+`containers`: definir as especificações de containers (nome, imagem) <br>
+
+<br>
+
+- `kubectl apply -f <arquivo_yaml>` -> Executar deployment que esta configurado no arquivo
+- `kubectl delete -f <arquivo_yaml>` -> Parar/deletar deployment
