@@ -165,5 +165,7 @@ Chaves mais utilizadas: <br>
 
 <br>
 
-- `kubectl apply -f <arquivo_yaml>` -> Executar deployment que esta configurado no arquivo
-- `kubectl delete -f <arquivo_yaml>` -> Parar/deletar deployment
+- `kubectl apply -f <arquivo_yaml>` -> Executar deployment/service que esta configurado no arquivo
+- `kubectl delete -f <arquivo_yaml>` -> Deletar deployment/service 
+
+Para unificar o deployment e o service em um só arquivo utilizando `---` no arquivo yaml
